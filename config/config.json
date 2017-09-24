@@ -1,0 +1,46 @@
+
+{
+
+    "development": {
+
+        "username": "root",
+
+        "password": "Austin78759",
+
+        "database": "sequelize_passportdb",
+
+        "host": "127.0.0.1",
+
+        "dialect": "mysql"
+
+    },
+
+    "test": {
+
+        "username": "root",
+
+        "password": "Austin78759",
+
+        "database": "sequelize_passportdb",
+
+        "host": "127.0.0.1",
+
+        "dialect": "mysql"
+
+    },
+
+    "production": {
+
+        "username": "root",
+
+        "password": "Austin78759",
+
+        "database": "sequelize_passportdb",
+
+        "host": "127.0.0.1",
+
+        "dialect": "mysql"
+
+    }
+
+}
