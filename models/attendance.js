@@ -1,6 +1,10 @@
 module.exports = function(sequelize, Sequelize) {
   return sequelize.define('student', {
-    firstName: Sequelize.STRING,
-    lastName: Sequelize.STRING
-  })
+
+    email: Sequelize.VARCHAR(255),
+    timestamps: false
+    present: Sequelize.BOOLEAN,
+
+  });
+
 }
