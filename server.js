@@ -27,7 +27,9 @@ app.get('/', function(req, res) {
 });
 
 //Models
-var models = require("./app/models");
+
+var models = require("./models");
+
 
 //Sync Database
 models.sequelize.sync().then(function() {
