@@ -5,8 +5,18 @@ var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
+var exphbs = require('express-handlebars');
 
 
+//Routes
+var authRoute = require('./routes/auth.js')(app);
+
+//For Handlebars
+app.set('views', './views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,7 +37,7 @@ app.get('/', function(req, res) {
 });
 
 //Models
-var models = require("./app/models");
+var models = require("./models");
 
 //Sync Database
 models.sequelize.sync().then(function() {
