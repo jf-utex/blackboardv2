@@ -2,52 +2,25 @@
 {
 
     "development": {
-
         "username": "root",
-
- Manisha
-        "password": "",
-
-       
-
+        "password": "",       
         "database": "sequelize_passportdb",
-
         "host": "127.0.0.1",
-
         "dialect": "mysql"
-
     },
-
     "test": {
-
         "username": "root",
-
-Manisha
         "password": "",
-
-
         "database": "sequelize_passportdb",
-
         "host": "127.0.0.1",
-
         "dialect": "mysql"
-
     },
-
     "production": {
-
         "username": "root",
-
-Manisha
         "password": "",
-
-
         "database": "sequelize_passportdb",
-
         "host": "127.0.0.1",
-
         "dialect": "mysql"
-
     }
 
 }
