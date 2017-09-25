@@ -5,6 +5,9 @@ var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
+var exphbs = require('express-handlebars');
+//var authRoute = require('./routes/auth.js')(app);
+
 
 
 
@@ -32,7 +35,7 @@ var models = require("./models");
 //Sync Database
 models.sequelize.sync().then(function() {
 
-    console.log('Nice! Database looks fine')
+    console.log('Nice! Database looks fine' )
 
 }).catch(function(err) {
 
@@ -42,9 +45,25 @@ models.sequelize.sync().then(function() {
 
 
 app.listen(8080, function(err) {
-
+    console.log('SITE IS STARTING');
     if (!err)
         console.log("Site is live");
     else console.log(err)
 
 });
+
+//For Handlebars
+app.set('views', './views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
+console.log("APP IS CHANGED");
+require('./config/passport/passport.js')(passport, models.user);
+//console.log(require('./config/passport/passport.js')('hello world'));
+
+console.log('Passport defined: ' + passport.authenticate);
+
+var authRoute = require('./routes/auth.js')(app,passport);
+
+
