@@ -1,4 +1,5 @@
 var authController = require('../controllers/authcontroller.js');
+<<<<<<< HEAD
  
 module.exports = function(app, passport) {
  
@@ -34,4 +35,18 @@ app.post('/signin', passport.authenticate('local-signin', {
  
 ));
  
+=======
+
+module.exports = function(app) {
+    app.post('/signup', authController.signup);
+		app.get('/signup', function(req, res) {
+			res.render('signup');
+		});
+		app.get('/signin', function(req, res) {
+			res.render('signin');
+		});
+  //   app.get('/signin', authController.signin);
+
+		// }
+>>>>>>> test
 }
