@@ -46,19 +46,32 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
         },
+
         studentloginType :{
             type: Sequelize.BOOLEAN,
             allowNull:false,
             defaultValue:true
 
-         },
-         adminloginType :{
+        },
+        adminloginType :{
             type: Sequelize.BOOLEAN,
             allowNull:true,
             defaultValue:false
 
-         }
+        }//,
+        //created_at: {
+            //type: Sequelize.DATE(3),
+            //defaultValue: Sequelize.literal("NOW()"),
+        // },
+        // updated_at: {
+        //     type: Sequelize.DATE(3),
+        //     defaultValue: Sequelize.literal('NOW()'),
+        // }
+
+
+
     });
 
     return User;
+
 }
