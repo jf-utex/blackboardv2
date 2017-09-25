@@ -4,6 +4,7 @@ module.exports = function(sequelize, Sequelize) {
     var User = sequelize.define('User', {
 
 
+
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -64,6 +65,7 @@ module.exports = function(sequelize, Sequelize) {
 
             type: Sequelize.BOOLEAN,
             allowNull:true,
+
             defaultValue:false
 
          }
