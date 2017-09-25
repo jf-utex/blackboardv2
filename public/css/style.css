@@ -1,33 +1,32 @@
-.main{
-	text-align: center;
+body {
+	padding: 0 7%;
 }
 
- body {
- 	width: 100%;
-	margin: 0 auto; 
+.row, .column {
 	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	background-image: url("../img/bg.jpg");
- 	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
- .jumbo{
- 	background:rgba(5, 5, 5, 0.71) !important;
-	color: white;
+}
 
- }
-.modal-color
-{
-    background: rgba(28, 116, 216, 0.36) !important;
+.column {
+	flex-direction: column;
 }
-.classhub{
-	font-family: "Adobe Fangsong Std R";
-	font-size: 15;
-	color: orange;
+
+.split {
+	justify-content: space-between;
 }
-.div{
-	padding-top: 10%;
-	padding-bottom: 10%;
+
+.y-center {
+	align-items: center;
+}
+
+header {
+	margin-bottom: 35px;
+}
+
+form {
+	width: 300px;
+}
+
+form input, form textarea, form button {
+	padding: 7px;
+	margin-bottom: 5px;
 }
