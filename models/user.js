@@ -47,21 +47,18 @@ module.exports = function(sequelize, Sequelize) {
             defaultValue: 'active'
         },
         studentloginType :{
-       type: Sequelize.BOOLEAN,
-       allowNull:false,
-       defaultValue:true
+            type: Sequelize.BOOLEAN,
+            allowNull:false,
+            defaultValue:true
 
-   },
-   adminloginType :{
-       type: Sequelize.BOOLEAN,
-       allowNull:true,
-       defaultValue:false
+         },
+         adminloginType :{
+            type: Sequelize.BOOLEAN,
+            allowNull:true,
+            defaultValue:false
 
-   },
-
-
+         }
     });
 
     return User;
-
 }
