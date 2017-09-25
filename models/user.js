@@ -1,6 +1,10 @@
 module.exports = function(sequelize, Sequelize) {
 
+
+ 
+ 
     var User = sequelize.define('user', {
+ 
 
         id: {
             autoIncrement: true,
@@ -18,6 +22,7 @@ module.exports = function(sequelize, Sequelize) {
             notEmpty: true
         },
 
+
         username: {
             type: Sequelize.TEXT
         },
@@ -25,6 +30,7 @@ module.exports = function(sequelize, Sequelize) {
         about: {
             type: Sequelize.TEXT
         },
+
 
         email: {
             type: Sequelize.STRING,
@@ -37,28 +43,35 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
             allowNull: false
         },
+]
 
         last_login: {
             type: Sequelize.DATE
         },
 
+
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
         },
+
         studentloginType :{
             type: Sequelize.BOOLEAN,
             allowNull:false,
             defaultValue:true
 
+
          },
          adminloginType :{
+
             type: Sequelize.BOOLEAN,
             allowNull:true,
             defaultValue:false
+
 
          }
     });
 
     return User;
 }
+

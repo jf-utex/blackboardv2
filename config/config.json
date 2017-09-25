@@ -5,7 +5,9 @@
 
         "username": "root",
 
+
         "password": "",
+
 
         "database": "sequelize_passportdb",
 
@@ -19,7 +21,9 @@
 
         "username": "root",
 
+
         "password": "",
+
 
         "database": "sequelize_passportdb",
 
@@ -33,7 +37,9 @@
 
         "username": "root",
 
+
         "password": "",
+
 
         "database": "sequelize_passportdb",
 

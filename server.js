@@ -44,7 +44,9 @@ app.get('/', function(req, res) {
 });
 
 //Models
+
 var models = require("./models");
+
 
 //Sync Database
 models.sequelize.sync().then(function() {
