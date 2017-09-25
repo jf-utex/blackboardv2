@@ -1,10 +1,9 @@
 module.exports = function(sequelize, Sequelize) {
 
 
- 
- 
-    var User = sequelize.define('user', {
- 
+    var User = sequelize.define('User', {
+
+
 
         id: {
             autoIncrement: true,
@@ -43,7 +42,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
             allowNull: false
         },
-]
+
 
         last_login: {
             type: Sequelize.DATE
@@ -66,12 +65,11 @@ module.exports = function(sequelize, Sequelize) {
 
             type: Sequelize.BOOLEAN,
             allowNull:true,
-            defaultValue:false
 
+            defaultValue:false
 
          }
     });
 
     return User;
 }
-
