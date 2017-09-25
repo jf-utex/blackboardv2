@@ -1,2 +1,2 @@
-# blackboardv2
+# Class Hub
 The new Blackboard
