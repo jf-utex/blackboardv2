@@ -1,8 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
 
-
-
     var User = sequelize.define('user', {
 
 
@@ -43,7 +41,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
             allowNull: false
         },
-]
+
 
         last_login: {
             type: Sequelize.DATE
@@ -68,8 +66,18 @@ module.exports = function(sequelize, Sequelize) {
             allowNull:true,
             defaultValue:falsea
 
-         }
+        }//,
+        //created_at: {
+            //type: Sequelize.DATE(3),
+            //defaultValue: Sequelize.literal("NOW()"),
+        // },
+        // updated_at: {
+        //     type: Sequelize.DATE(3),
+        //     defaultValue: Sequelize.literal('NOW()'),
+        // }
+
     });
 
     return User;
+
 }
