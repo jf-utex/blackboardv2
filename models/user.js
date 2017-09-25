@@ -1,10 +1,10 @@
 module.exports = function(sequelize, Sequelize) {
 
 
- 
- 
+
+
     var User = sequelize.define('user', {
- 
+
 
         id: {
             autoIncrement: true,
@@ -66,12 +66,10 @@ module.exports = function(sequelize, Sequelize) {
 
             type: Sequelize.BOOLEAN,
             allowNull:true,
-            defaultValue:false
-
+            defaultValue:falsea
 
          }
     });
 
     return User;
 }
-
