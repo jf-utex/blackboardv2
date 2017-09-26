@@ -1,75 +1,85 @@
 module.exports = function(sequelize, Sequelize) {
 
 
-    var User = sequelize.define('User', {
+  var User = sequelize.define('User', {
+
+      id: {
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+
+      firstname: {
+        type: Sequelize.STRING,
+        notEmpty: true
+      },
+
+      lastname: {
+        type: Sequelize.STRING,
+        notEmpty: true
+      },
 
 
+      username: {
+        type: Sequelize.TEXT
+      },
 
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
-
-        firstname: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
-
-        lastname: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
+      about: {
+        type: Sequelize.TEXT
+      },
 
 
-        username: {
-            type: Sequelize.TEXT
-        },
+      email: {
+        type: Sequelize.STRING,
+        validate: {
+          isEmail: true
+        }
+      },
 
-        about: {
-            type: Sequelize.TEXT
-        },
-
-
-        email: {
-            type: Sequelize.STRING,
-            validate: {
-                isEmail: true
-            }
-        },
-
-        password: {
-            type: Sequelize.STRING,
-            allowNull: false
-        },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
 
 
-        last_login: {
-            type: Sequelize.DATE
-        },
+      last_login: {
+        type: Sequelize.DATE
+      },
 
 
-        status: {
-            type: Sequelize.ENUM('active', 'inactive'),
-            defaultValue: 'active'
-        },
+      status: {
+        type: Sequelize.ENUM('active', 'inactive'),
+        defaultValue: 'active'
+      },
 
-        studentloginType :{
-            type: Sequelize.BOOLEAN,
-            allowNull:false,
-            defaultValue:true
+      studentloginType: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
 
+      },
+      adminloginType: {
 
-         },
-         adminloginType :{
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
 
-            type: Sequelize.BOOLEAN,
-            allowNull:true,
+        defaultValue: false
+      },
+      classCode: {
+        type: Sequelize.STRING,
+        notEmpty: false
+      }
 
-            defaultValue:false
+      //,
+      //created_at: {
+      //type: Sequelize.DATE(3),
+      //defaultValue: Sequelize.literal("NOW()"),
+      // },
+      // updated_at: {
+      //     type: Sequelize.DATE(3),
+      //     defaultValue: Sequelize.literal('NOW()'),
+      // }
+    }
+  });
 
-         }
-    });
-
-    return User;
-}
+return User;
