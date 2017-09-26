@@ -21,7 +21,7 @@ module.exports = function(passport, user) {
 
         },
 
-
+ 
 
         function(req, email, password, done) {
 
@@ -30,6 +30,8 @@ module.exports = function(passport, user) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
 
             };
+
+
 
             User.findOne({
                 where: {
@@ -60,13 +62,7 @@ module.exports = function(passport, user) {
 
                             firstname: req.body.firstname,
 
- 
-                            lastname: req.body.lastname,
-
-                            classCode: req.body.code,
-                            
-                            about: req.body.about
- 
+                            lastname: req.body.lastname
 
                         };
 
@@ -144,13 +140,11 @@ passport.use('local-signin', new LocalStrategy(
 
         }
 
-
         User.findOne({
             where: {
                 email: email
             }
         }).then(function(user) {
-
 
             if (!user) {
 
@@ -187,6 +181,7 @@ passport.use('local-signin', new LocalStrategy(
     }
 
 ));
+
 
 }
 
