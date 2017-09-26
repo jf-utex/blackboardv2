@@ -1,123 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Student Page</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href="../CSS/style.css">
-<script type="text/javascript" src="../JavaScript/Javascript.js"></script>
+<meta charset="UTF-8">
+<title>classHUB</title>
 
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+
 
 </head>
+
 <body>
-	<div class="container">
-		<div class="row" >
-      <div class="jumbotron jumbo"  >
 
-        <div class="main">
-        <h1 class="classhub" style="color:#D2B41C"><u>ClassHub</u></h1><br><br>
+<div class="logo">
+</div>
 
-        <div class="row" id="student">
+<div class="band">
+</div>
 
-        <h3 style="color:blue"><u>Student Login Page</u></h3>
-        <p>Login to the ClassHub system here. </p>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModallogin">Login</button><br>
-        <p> Forgot your password? Need an account? Get login assistance</p>
-        <!--<button type="button" class="btn btn-primary" id="secondModalButton"
-    data-dismiss="modal"
-    data-toggle="modal"
-    data-target="#secondModal">Second modal</button>-->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalacc">Get Login Assistance</button>
-        </div>
-
-    </div>
-		</div>
+<div class="outerbox">
+	<div class="box login">
+		<p>Login to the ClassHub</p>
+		<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23"><g>
+		<g><circle id="pauselight" class="cls-1" cx="68.98" cy="118.86" r="19.46"  type="submit" value="Sign In"/>
+		</g>
+		</svg>
+		<!-- <button type="button" class="cls1" data-toggle="modal" data-target="#myModallogin">Login</button> -->
 	</div>
+
+	<div class="box register">
+		<p>Request account or help.</p>
+		<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23">
+		<g>
+		<a xlink:href="./signup.html" target="_self" value="Sign Up">
+		<circle id="pauselight" class="cls-1" cx="68.98" cy="118.86" r="19.46"/>
+		</a>
+		</svg>
+		<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
+	</div>
+
+
 </div>
 
 
 
-  <!-- Login modal-->
-	<div id="myModallogin" class="modal fade "  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header modal-color" >
-        <button type="button" class="close modal-color" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Login </h4>
-      </div>
-      <div class="modal-body">
-       <form >
-  <div class="input-group margin-bottom-sm " >
-  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-  <input class="form-control" type="text" placeholder="Email address">
-</div><br>
-<div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-  <input class="form-control" type="password" placeholder="Password">
-</div><br><br>
-  <div class="text-center">
-  <button type="submit" value="Submit" class="btn btn-info"> Submit</button>
-  </div><br>
-</form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Account Request-->
-
-
-      <div class="modal fade " id="myModalacc"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header modal-color" >
-        <button type="button" class="close modal-color" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request an account or New password</h4>
-      </div>
-      <div class="modal-body">
-       <form action="/action_page.php">
-        <div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-  <input class="form-control" type="password" placeholder="First Last Name">
-</div><br>
-  <div class="input-group margin-bottom-sm " >
-  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-  <input class="form-control" type="text" placeholder="Email address">
-</div><br>
-<div class="input-group margin-bottom-sm " >
-  <span class="input-group-addon"><i class="fa fa-comment fa-fw"></i></span>
-  <input class="form-control" type="text" placeholder="Comment">
-</div><br>
-<br>
-  <div class="text-center">
-  <button type="submit" value="Submit" class="btn btn-info"> Submit</button>
-  </div><br>
-</form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
