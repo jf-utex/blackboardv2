@@ -34,7 +34,7 @@ var models = require("./models");
 
 
 //Sync Database
-models.sequelize.sync().then(function() {
+models.sequelize.sync({force: true}).then(function() {
 
     console.log('Nice! Database looks fine' )
 
@@ -68,4 +68,3 @@ require('./config/passport.js')(passport, models.user);
 console.log('Passport defined: ' + passport.authenticate);
 
 var authRoute = require('./routes/auth.js')(app,passport);
-

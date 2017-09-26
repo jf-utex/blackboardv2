@@ -21,9 +21,9 @@ module.exports = function(sequelize, Sequelize) {
         },
 
 
-        username: {
-            type: Sequelize.TEXT
-        },
+        // username: {
+        //     type: Sequelize.TEXT
+        // },
 
         about: {
             type: Sequelize.TEXT
@@ -60,6 +60,12 @@ module.exports = function(sequelize, Sequelize) {
 
 
          },
+
+         userTypeCode: {
+             type: Sequelize.STRING,
+             allowNull: false
+         },
+
          adminloginType :{
 
             type: Sequelize.BOOLEAN,
