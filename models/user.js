@@ -64,7 +64,7 @@ module.exports = function(sequelize, Sequelize) {
 
             type: Sequelize.BOOLEAN,
             allowNull:true,
-            defaultValue:falsea
+            defaultValue:false
 
         }//,
         //created_at: {

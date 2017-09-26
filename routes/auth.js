@@ -33,5 +33,4 @@ app.post('/signin', passport.authenticate('local-signin', {
     }
 
 ));
-
-
+}
