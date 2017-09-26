@@ -60,7 +60,13 @@ module.exports = function(passport, user) {
 
                             firstname: req.body.firstname,
 
-                            lastname: req.body.lastname
+ 
+                            lastname: req.body.lastname,
+
+                            classCode: req.body.code,
+                            
+                            about: req.body.about
+ 
 
                         };
 
