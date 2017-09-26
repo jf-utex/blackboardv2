@@ -58,7 +58,13 @@ module.exports = function(sequelize, Sequelize) {
             allowNull:true,
             defaultValue:false
 
-        }//,
+        },
+        classCode : {
+            type: Sequelize.STRING,
+            notEmpty: false
+        }
+        
+        //,
         //created_at: {
             //type: Sequelize.DATE(3),
             //defaultValue: Sequelize.literal("NOW()"),
