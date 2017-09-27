@@ -79,7 +79,7 @@ module.exports = function(sequelize, Sequelize) {
       //     type: Sequelize.DATE(3),
       //     defaultValue: Sequelize.literal('NOW()'),
       // }
-    }
-  });
+    })
+  };
 
 return User;
