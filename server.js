@@ -14,10 +14,17 @@ app.use(bodyParser.json());
 // For Passport
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+app.use(passport.session({
+    secret: 'cookie_secret',
+    name: 'cookie_name',
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+})); // persistent login sessions
 
 app.get('/', function(req, res) {
     res.send('Welcome to Passport with Sequelize');
+
 
 });
 //Models
@@ -50,4 +57,3 @@ require('./config/passport/passport.js')(passport, models.user);
 //console.log(require('./config/passport/passport.js')('hello world'));
 console.log('Passport defined: ' + passport.authenticate);
 var authRoute = require('./routes/auth.js')(app,passport);
-

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Check In Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  p{
+  	font-size: 20px;
+  }
+  .center{
+  	text-align: center;
+  }
+  .btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.head{
+	background-color: rgba(114, 76, 38, 0.8);
+	color:white;
+}
+  </style>
+
+</head>
+<body>
+	<div class="container center">
+	
+	<div class="col-sm-12 center" >
+		<div class="head" >
+		<h2 class="center">Student Attendance and assignment Portal</h2>
+		<h2>Week 1 (25th Sept -29th Sept)</h2>
+	    </div> 
+	<div class="col-sm-10 panel panel-default">
+		<div class="col-sm-8">
+			<p>Date - 25th September 2017</p><br>
+			<form>
+
+				<input type="text" name="ass" size="45" placeholder="link of assignment"><br><br>
+			<button class="btn btn-danger" >Submit Assignment</button>
+			</form>
+			
+		</div>
+		<div class="col-sm-2 ">	
+			Click here to checkIn<br>	
+			<button type="button" class="btn btn-success btn-circle btn-lg" id="checkin"><i class="glyphicon glyphicon-ok"></i></button>
+		</div>	
+	</div>
+
+	<div class="col-sm-10 panel panel-default">
+		<div class="col-sm-8">
+			<p>Date - 26th September 2017</p><br>
+			<form>
+				<input type="text" name="ass" size="45" placeholder="link of assignment"><br><br>
+			<button class="btn btn-danger">Submit Assignment</button>
+			</form>
+		</div>
+		<div class="col-sm-2 ">	
+		Click here to checkIn<br>		
+			<button type="button" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button>
+		</div>	
+	</div>
+	<div class="col-sm-10 panel panel-default">
+		<div class="col-sm-8">	
+			<p>Date - 27th September 2017</p>
+			<form>
+				<input type="text" name="ass" size="45" placeholder="link of assignment"><br><br>
+			<button class="btn btn-danger">Submit Assignment</button>
+			</form>
+		</div>
+		<div class="col-sm-2 ">	
+		Click here to checkIn<br>		
+			<button type="button" class="btn btn-success btn-circle btn-lg" style="text-align:right"><i class="glyphicon glyphicon-ok"></i></button>
+		</div>	
+	</div>
+	<div class="col-sm-10 panel panel-default">
+		<div class="col-sm-8">
+			<p>Date - 28th September 2017</p>
+			<form>
+				<input type="text" name="ass" size="45" placeholder="link of assignment"><br><br>
+			<button class="btn btn-danger">Submit Assignment</button>
+			</form>
+		</div>
+		<div class="col-sm-2 ">	
+		Click here to checkIn<br>		
+			<button type="button" class="btn btn-success btn-circle btn-lg" style="text-align:right"><i class="glyphicon glyphicon-ok"></i></button>
+		</div>	
+	</div>
+	<div class="col-sm-10 panel panel-default">
+		<div class="col-sm-8">
+			<p>Date - 29th September 2017</p>
+			<form>
+				<input type="text" size="45" name="ass" placeholder="link of assignment"><br><br>
+			<button class="btn btn-danger">Submit Assignment</button>
+			</form>
+		</div>
+		<div class="col-sm-2 ">	
+		     Click here to checkIn<br>	
+			<button type="button" class="btn btn-success btn-circle btn-lg" style="text-align:right"><i class="glyphicon glyphicon-ok"></i></button>
+		</div>	
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	$("#checkin").click(function(){
+		alert("present");
+		$.post('present', {assignment: 'fromUI'}, function(){
+			alert('sent');
+		}).done(function() {
+			alert('done');
+		}).fail(function(err) {
+			alert('error: ' + err);
+		})
+
+
+	});
+
+</script>
+</body>
+</html>
