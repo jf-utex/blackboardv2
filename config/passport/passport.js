@@ -164,9 +164,19 @@ passport.use('local-signin', new LocalStrategy(
 
 
             var userinfo = user.get();
+            req.session.userinfo = userinfo;
+            //req.local.userinfo = userinfo;
+            //req.local.message = 'helloworld';
+            console.log('@@@@@@@@@@@@@@@@@@@@@@ ' + req.session.userinfo.firstname+ ' email: ' + req.session.userinfo.email);
             return done(null, userinfo);
+<<<<<<< HEAD
 
 
+=======
+            
+ 
+ 
+>>>>>>> 9d358d8a71d1e183be529d0facb5ddeabfb38525
         }).catch(function(err) {
 
             console.log("Error:", err);
