@@ -194,3 +194,14 @@ height: 40vh;
   text-decoration: none;
   cursor: pointer;
 }
+
+table {
+    margin: 10px;
+}
+th, td {
+    padding: 5px;
+    border: 1px solid #999;
+}
+th {
+    background: #ccc;
+}
