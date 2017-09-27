@@ -1,6 +1,4 @@
-/*svg {
-	pointer-events: none;
-}*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .main {
   text-align: center;
@@ -12,7 +10,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("public/img/bg.jpg");
+  background-image: url("../IMG/stair2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,10 +38,11 @@ body {
 }*/
 
 .logo {
-  width: 300px;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 308px;
+  height: 150px;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
   margin: 50px auto;
+  background-image: url("../IMG/logo2.png");
 }
 
 .outerbox {
@@ -51,16 +50,20 @@ body {
   /*height: 300px;*/
   position: relative;
   background-color: rgba(0, 0, 0, 0.0);
-  margin: 10vh auto;
+  margin: 4vh auto;
   float: center;
   display: block;
   z-index: 50;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 .box {
   width: 300px;
   height: 450px;
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   float: left;
   text-align: center;
   color: white;
@@ -68,16 +71,26 @@ body {
 
 .login {
   margin-right: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  font-family: 'Raleway', sans-serif;
 }
 
+.register {
+  background-color: rgba(0, 0, 0, 1);
+  font-family: 'Raleway', sans-serif;
+}
+
+
 .band {
-  background-color: rgba(50, 50, 150, 0.4);
-  height: 250px;
+  background-color: rgba(80, 147, 165, 0.5);
+  height: 280px;
   width: 100%;
-  top: calc(15vh + 200px);
+  top: calc(2vh + 330px);
   position: absolute;
   z-index: -5;
   display: block;
+
 }
 
 .cls-1 {
