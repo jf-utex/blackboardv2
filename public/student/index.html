@@ -19,49 +19,18 @@
 	<div class="outerbox">
 		<div class="box login">
 			<p>Login to the ClassHub</p>
-			<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23"><g>
+			<svg id="donutnav1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23"><g>
 		<g><circle id="pauselight" class="cls-1" cx="68.98" cy="118.86" r="19.46"  type="submit" value="Sign In"/>
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="logModal">Open Modal</button>
 			</a>
 			</svg>
-
-			<!-- Trigger/Open The Modal -->
-			<button id="logBtn">Login</button>
-
-			<!-- The Modal -->
-			<div id="logModal" class="modallog">
-
-				<!-- Modal for registration content -->
-				<div class="modal-registration">
-					<span class="close">&times;</span>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2>Sign In Here <h2></div>
-						<div class="modal-body">
-							<form action="" <form id="signup" name="signup" method="post" action="/signin">
-
-								<label for="email">Email Address</label><br>
-								<input class="text" name="email" type="email" /><br><br>
-
-								<label for="password"> Password </label><br>
-								<input name="password" type="password" /><br><br>
-								<input class="btnlog" type="submit" value="Sign In" />
-							</form>
-
-						</div>
-					</div>
-				</div>
-				<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
-			</div>
-
-			<!-- <button type="button" class="cls1" data-toggle="modal" data-target="#myModallogin">Login</button> -->
 		</div>
 
 		<div class="box register">
 			<p>Request Account</p>
 
 			<!-- Trigger/Open The Modal -->
-			<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23">
+			<svg id="donutnav2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23">
 		<g>
 
 		<!-- <a xlink:href="../modal.html" target="_self" value="Sign Up"> -->
@@ -70,18 +39,21 @@
 		</a>
 		</svg>
 
-			<!-- Trigger/Open The Modal -->
-			<button id="regBtn">Register</button>
+		</div>
+	</div>
+	<div id="modals" style="position:fixed; width:100%; height:100%; z-index:1000">
+		<div id="overlay" style="">
 
-			<!-- The Modal -->
-			<div id="regModal" class="modalreg">
+		</div>
+		<!-- The Modal -->
+		<div id="regModal" class="modalreg" style="display:none">
 
-				<!-- Modal for registration content -->
-				<div class="modal-registration">
-					<span class="close">&times;</span>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2>Sign Up Here <h2></div>
+			<!-- Modal for registration content -->
+			<div class="modal-registration">
+				<span class="close">&times;</span>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>Sign Up Here <h2></div>
 						<div class="modal-body">
 							<form action="" <form id="signup" name="signup" method="post" action="/signup">
 								<label for="firstname">First Name</label><br>
@@ -103,8 +75,29 @@
 				</div>
 				<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
 			</div>
+		<div id="logModal" class="modallog" style="display:none">
 
+			<!-- Modal for registration content -->
+			<div class="modal-registration">
+				<span class="close">&times;</span>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>Sign In Here <h2></div>
+					<div class="modal-body">
+						<form action="" <form id="signup" name="signup" method="post" action="/signin">
+							<label for="email">Email Address</label><br>
+							<input class="text" name="email" type="email" /><br><br>
+							<label for="password"> Password </label><br>
+							<input name="password" type="password" /><br><br>
+							<input class="btnlog" type="submit" value="Sign In"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
 		</div>
+</div>
+
 <script type="text/javascript" src="../javascript/javascript.js"></script>
 
 </body>
