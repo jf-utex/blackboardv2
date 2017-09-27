@@ -21,8 +21,33 @@
 			<p>Login to the ClassHub</p>
 			<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23"><g>
 		<g><circle id="pauselight" class="cls-1" cx="68.98" cy="118.86" r="19.46"  type="submit" value="Sign In"/>
-		</g>
-		</svg>
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal1" data-target="logModal">Open Modal</button>
+			</a>
+			</svg>
+			<button id="myBtn">Open Modal</button>
+<!-- Log in Modal -->
+			<!-- The Modal -->
+			<div id="logModal" class="modal">
+
+				<!-- Modal for registration content -->
+				<div class="modal-registration">
+					<span class="close">&times;</span>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2>Sign Up Here <h2></div>
+						<div class="modal-body">
+							<form action="" <form id="signup" name="signup" method="post" action="/signup">
+								<label for="email">Email Address</label><br>
+								<input class="text" name="email" type="email" /><br><br>
+								<label for="password"> Password </label><br>
+								<input name="password" type="password" /><br><br>
+								<input class="btn" type="submit" value="Sign Up" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
+			</div>
 			<!-- <button type="button" class="cls1" data-toggle="modal" data-target="#myModallogin">Login</button> -->
 		</div>
 
@@ -33,9 +58,9 @@
 			<svg id="donutnav" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.97 160.23">
 		<g>
 
-		<a xlink:href="../modal.html" target="_self" value="Sign Up">
+		<!-- <a xlink:href="../modal.html" target="_self" value="Sign Up"> -->
 		<circle id="pauselight" class="cls-1" cx="68.98" cy="118.86" r="19.46"/>
-		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal2" data-target="myModal">Open Modal</button>
 		</a>
 		</svg>
 
@@ -45,53 +70,37 @@
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
 
-				<!-- Modal content -->
-				<div class="modal-content">
+				<!-- Modal for registration content -->
+				<div class="modal-registration">
 					<span class="close">&times;</span>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h2>Sign Up Here <h2></div>
 						<div class="modal-body">
 							<form action="" <form id="signup" name="signup" method="post" action="/signup">
-								<label for="email">Email Address</label><br>
-								<input class="text" name="email" type="email" /><br><br>
 								<label for="firstname">First Name</label><br>
 								<input name="firstname" type="text" /><br><br>
 								<label for="lastname">Last Name</label><br>
 								<input name="lastname" type="text" /><br><br>
+								<label for="email">Email Address</label><br>
+								<input class="text" name="email" type="email" /><br><br>
+								<label for="about">About Me</label><br>
+								<input name="about" type="text" /><br><br>
+								<label for="code"> Class Code </label><br>
+								<input name="code" type="text" /><br><br>
 								<label for="password"> Password </label><br>
 								<input name="password" type="password" /><br><br>
 								<input class="btn" type="submit" value="Sign Up" />
 							</form>
+
 						</div>
 					</div>
-
 				</div>
 				<!-- <button type="button" class="cls-1" data-toggle="modal" data-target="#myModalacc">Assistance</button> -->
 			</div>
 
 		</div>
-
-		<script type="text/javascript">
-			// Get the modal
-			var modal = document.getElementById('myModal');
-
-			// Get the button that opens the modal
-			var btn = document.getElementById("myBtn");
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
-
-			// When the user clicks on the button, open the modal
-			btn.onclick = function() {
-				modal.style.display = "block";
-			}
-
-			// When the user clicks on <span> (x), close the modal
-			span.onclick = function() {
-				modal.style.display = "none";
-			}
-		</script>
+<script type="text/javascript" src="../javascript/javascript.js"></script>
 
 </body>
 
