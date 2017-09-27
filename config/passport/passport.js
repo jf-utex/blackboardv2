@@ -168,7 +168,12 @@ passport.use('local-signin', new LocalStrategy(
  
  
             var userinfo = user.get();
+            req.session.userinfo = userinfo;
+            //req.local.userinfo = userinfo;
+            //req.local.message = 'helloworld';
+            console.log('@@@@@@@@@@@@@@@@@@@@@@ ' + req.session.userinfo.firstname+ ' email: ' + req.session.userinfo.email);
             return done(null, userinfo);
+            
  
  
         }).catch(function(err) {
