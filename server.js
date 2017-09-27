@@ -1,4 +1,3 @@
-
 var express = require('express');
 var app = express();
 var passport   = require('passport');
@@ -6,8 +5,9 @@ var session    = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
+//var authRoute = require('./routes/auth.js')(app);
 
-var path = require('path');
+
 
 
 //For BodyParser
@@ -20,11 +20,18 @@ app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true}))
 
 app.use(passport.initialize());
 
-app.use(passport.session()); // persistent login sessions
+app.use(passport.session({
+    secret: 'cookie_secret',
+    name: 'cookie_name',
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+})); // persistent login sessions
 
 app.get('/', function(req, res) {
 
     res.send('Welcome to Passport with Sequelize');
+
 
 });
 
@@ -34,7 +41,7 @@ var models = require("./models");
 
 
 //Sync Database
-models.sequelize.sync({force: true}).then(function() {
+models.sequelize.sync().then(function() {
 
     console.log('Nice! Database looks fine' )
 
@@ -60,9 +67,7 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 console.log("APP IS CHANGED");
-
-require('./config/passport.js')(passport, models.user);
-
+require('./config/passport/passport.js')(passport, models.user);
 //console.log(require('./config/passport/passport.js')('hello world'));
 
 console.log('Passport defined: ' + passport.authenticate);

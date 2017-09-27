@@ -1,8 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-
     var User = sequelize.define('user', {
-
 
         id: {
             autoIncrement: true,
@@ -20,15 +18,13 @@ module.exports = function(sequelize, Sequelize) {
             notEmpty: true
         },
 
-
-        // username: {
-        //     type: Sequelize.TEXT
-        // },
+        username: {
+            type: Sequelize.TEXT
+        },
 
         about: {
             type: Sequelize.TEXT
         },
-
 
         email: {
             type: Sequelize.STRING,
@@ -42,11 +38,9 @@ module.exports = function(sequelize, Sequelize) {
             allowNull: false
         },
 
-
         last_login: {
             type: Sequelize.DATE
         },
-
 
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
@@ -58,21 +52,19 @@ module.exports = function(sequelize, Sequelize) {
             allowNull:false,
             defaultValue:true
 
-
-         },
-
-         userTypeCode: {
-             type: Sequelize.STRING,
-             allowNull: false
-         },
-
-         adminloginType :{
-
+        },
+        adminloginType :{
             type: Sequelize.BOOLEAN,
             allowNull:true,
             defaultValue:false
 
-        }//,
+        },
+        classCode : {
+            type: Sequelize.STRING,
+            notEmpty: false
+        }
+
+        //,
         //created_at: {
             //type: Sequelize.DATE(3),
             //defaultValue: Sequelize.literal("NOW()"),
@@ -81,6 +73,8 @@ module.exports = function(sequelize, Sequelize) {
         //     type: Sequelize.DATE(3),
         //     defaultValue: Sequelize.literal('NOW()'),
         // }
+
+
 
     });
 
